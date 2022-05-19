@@ -6,7 +6,7 @@
 	-there should be 2 folders inside called Movie Zone, MovieServices
 
 2.Open two terminals and go inside Movie Zon & MovieServices folder using each terminal 
-	command - cd Movie Zone & cd MovieServices
+	command > cd Movie Zone & cd MovieServices
 
 3.In each terminal type following command respectively to install node modules
 	command - npm install
