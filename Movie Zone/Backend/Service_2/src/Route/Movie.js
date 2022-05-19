@@ -13,15 +13,6 @@ router.get('/get-movie/:id',(req,res)=>{
     })
 })
 
-// Get All Cart Details By Movie ID
-router.get('/get-cartmovie/:id',(req,res)=>{
-    if(!isValidObjectId(req.params.id)) return res.status(400).send(`No Record with given id : $(req.params.id)`);
-
-    Movie.find({_id : req.params.id},(err,doc)=>{
-        if(!err) res.send(doc)
-        else console.log("Error in Retrieving Cart Details :" +JSON.stringify(err,undefined,2));
-    })
-})
 
 // Get All Movie Details
 router.get('/get-movie',(req,res)=>{
