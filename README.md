@@ -2,7 +2,7 @@
  
  INSTALLATION STEPS
 
-1. Open the folder using VS code
+1.Open the folder using VS code
 	-there should be 2 folders inside called Movie Zone, MovieServices
 
 2.Open two terminals and go inside Movie Zon & MovieServices folder using each terminal 
