@@ -1,7 +1,10 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 import QRCode from 'qrcode.react'
 
 export default function QR_Generator() {
+    const params = useParams();
+
     const downloadQRCode = () => {
         const qrCodeURL = document.getElementById('qrCodeEl').toDataURL("image/png").replace("image/png", "image/octet-stream");
         console.log(qrCodeURL)
@@ -14,7 +17,7 @@ export default function QR_Generator() {
     }
     return (
     <>
-        <QRCode id='qrCodeEl' size={150} value='62825d53db43e300a742346'/>
+        <QRCode id='qrCodeEl' size={150} value={params.id}/>
         <input type="button" value="Download" onClick={downloadQRCode}/>
     </>
     )

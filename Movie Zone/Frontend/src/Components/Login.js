@@ -73,6 +73,7 @@ export default function Login() {
                             sessionStorage.setItem('isAuth',"true");
                             sessionStorage.setItem('role',res.data.role);
                             sessionStorage.setItem('email',res.data.email);
+                            sessionStorage.setItem('id',res.data.id);
                             setInterval(()=> window.location.pathname = "/home",1000);
                         }
                     });
@@ -82,6 +83,7 @@ export default function Login() {
                             sessionStorage.setItem('isAuth',"true");
                             sessionStorage.setItem('role',res.data.role);
                             sessionStorage.setItem('email',res.data.email);
+                            sessionStorage.setItem('id',res.data.id);
                             setInterval(()=> window.location.pathname = "/home",1000);
                         }
                     });

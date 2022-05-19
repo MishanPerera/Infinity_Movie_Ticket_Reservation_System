@@ -12,6 +12,8 @@ import Cart from './Components/Cart';
 import Reservation from './Components/Reservation';
 import About from './Components/About';
 import ProtectedRoute from './ProtectedRoute';
+import QR_Generator from './Components/QR_Generator';
+import User from './Components/User';
 
 export default function App() {
     const isAuth = sessionStorage.getItem("isAuth");
@@ -30,6 +32,9 @@ export default function App() {
                 <ProtectedRoute exact path='/movie' component={Movie} auth={isAuth}/>
                 <ProtectedRoute exact path='/reservation' component={Reservation} auth={isAuth}/>
                 <ProtectedRoute exact path='/about' component={About} auth={isAuth}/>
+                <ProtectedRoute exact path='/qr/:id' component={QR_Generator} auth={isAuth}/>
+                <ProtectedRoute exact path='/user' component={User} auth={isAuth}/>
+                
 
                 {/* <ProtectedRoute exact path='/home' component={Home} auth={isAuth}/>
                 <ProtectedRoute exact path='/item' component={Item} auth={isAuth}/>
