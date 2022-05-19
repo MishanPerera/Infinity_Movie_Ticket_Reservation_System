@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/movie" name="MovieAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/get-movie">
+        <inSequence>
+            <log description="Get Movie Details By ID">
+                <property name="Message" value="Welcome to Movie Service"/>
+            </log>
+            <send>
+                <endpoint key="GetMovieEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/get-movie/{id}">
+        <inSequence>
+            <log description="Get Movie Details">
+                <property name="Message" value="Welcome to Movie Service"/>
+            </log>
+            <send>
+                <endpoint key="GetMovieByIdEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/add-movie">
+        <inSequence>
+            <log description="Add Movie Details">
+                <property name="Message" value="Welcome to Movie Service"/>
+            </log>
+            <send>
+                <endpoint key="AddMovieEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" uri-template="/update-movie">
+        <inSequence>
+            <log description="Update Movie Details">
+                <property name="Message" value="Welcome to Movie Service"/>
+            </log>
+            <send>
+                <endpoint key="UpdateMovieEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="DELETE" uri-template="/delete-movie/{id}">
+        <inSequence>
+            <log description="Delete Movie Details">
+                <property name="Message" value="Welcome to Movie Service"/>
+            </log>
+            <send>
+                <endpoint key="DeleteMovieEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

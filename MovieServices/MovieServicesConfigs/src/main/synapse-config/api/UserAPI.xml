@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/user" name="UserAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/sign-in">
+        <inSequence>
+            <log description="User Sign IN">
+                <property name="Message" value="Welcome to User Sign In Service"/>
+            </log>
+            <send>
+                <endpoint key="SignInEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/sign-up">
+        <inSequence>
+            <log description="User Sign UP">
+                <property name="Message" value="Welcome to User Sign Up Service"/>
+            </log>
+            <send>
+                <endpoint key="SignUpEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

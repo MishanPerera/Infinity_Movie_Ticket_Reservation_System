@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="SignInEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/SignInEP.xml</file>
+    </artifact>
+    <artifact name="SignUpEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/SignUpEP.xml</file>
+    </artifact>
+    <artifact name="UserAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/UserAPI.xml</file>
+    </artifact>
+    <artifact name="GetMovieEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetMovieEP.xml</file>
+    </artifact>
+    <artifact name="GetMovieByIdEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetMovieByIdEP.xml</file>
+    </artifact>
+    <artifact name="AddMovieEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/AddMovieEP.xml</file>
+    </artifact>
+    <artifact name="UpdateMovieEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/UpdateMovieEP.xml</file>
+    </artifact>
+    <artifact name="DeleteMovieEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/DeleteMovieEP.xml</file>
+    </artifact>
+    <artifact name="MovieAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/MovieAPI.xml</file>
+    </artifact>
+    <artifact name="MovieAPI_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/MovieAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="MovieAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/MovieAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="GetReservationByIdEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetReservationByIdEP.xml</file>
+    </artifact>
+    <artifact name="GetReservationEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetReservationEP.xml</file>
+    </artifact>
+    <artifact name="AddReservationEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/AddReservationEP.xml</file>
+    </artifact>
+    <artifact name="UpdateReservationEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/UpdateReservationEP.xml</file>
+    </artifact>
+    <artifact name="DeleteReservationEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/DeleteReservationEP.xml</file>
+    </artifact>
+    <artifact name="ReservationAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ReservationAPI.xml</file>
+    </artifact>
+    <artifact name="ReservationAPI_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ReservationAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="ReservationAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ReservationAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="GetCartEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetCartEP.xml</file>
+    </artifact>
+    <artifact name="AddCartEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/AddCartEP.xml</file>
+    </artifact>
+    <artifact name="DeleteCart" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/DeleteCart.xml</file>
+    </artifact>
+    <artifact name="CartAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/CartAPI.xml</file>
+    </artifact>
+    <artifact name="CartAPI_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/CartAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="CartAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/CartAPI_metadata.yaml</file>
+    </artifact>
+</artifacts>

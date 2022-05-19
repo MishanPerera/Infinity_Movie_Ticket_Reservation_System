@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/reservation" name="ReservationAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/get-reservation">
+        <inSequence>
+            <log description="Get Reservation Details">
+                <property name="Message" value="Welcome to Reservation Service"/>
+            </log>
+            <send>
+                <endpoint key="GetReservationEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/get-reservation/{id}">
+        <inSequence>
+            <log description="Get Reservation Details By Id">
+                <property name="Message" value="Welcome to Reservation Service"/>
+            </log>
+            <send>
+                <endpoint key="GetReservationById"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/add-reservation">
+        <inSequence>
+            <log description="Add Reservation Details">
+                <property name="Message" value="Welcome to Reservation Service"/>
+            </log>
+            <send>
+                <endpoint key="AddReservationEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" uri-template="/update-reservation/{id}">
+        <inSequence>
+            <log description="Update Reservation Details">
+                <property name="Message" value="Welcome to Reservation Service"/>
+            </log>
+            <send>
+                <endpoint key="UpdateReservationEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="DELETE" uri-template="/delete-reservation/{id}">
+        <inSequence>
+            <log description="Delete Reservation Details">
+                <property name="Message" value="Welcome to Reservation Service"/>
+            </log>
+            <send>
+                <endpoint key="DeleteReservationEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

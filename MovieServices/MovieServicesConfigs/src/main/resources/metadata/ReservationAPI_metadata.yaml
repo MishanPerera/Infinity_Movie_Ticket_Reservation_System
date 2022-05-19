@@ -1,0 +1,11 @@
+---
+key: "ReservationAPI-1.0.0"
+name : "ReservationAPI"
+displayName : "ReservationAPI"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/reservation"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"
