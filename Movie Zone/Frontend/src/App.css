@@ -1,0 +1,97 @@
+body{
+  margin: 0 auto;
+}
+.App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);
+}
+._btn {
+  display: flex;
+  justify-content: center;
+}
+._btn button {
+  padding: 0.5rem;
+  background-color: white;
+  border: none;
+  transition: 0.2s;
+  margin: 5px auto;
+  text-transform: uppercase;
+  color: #189cfc;
+  font-weight: bold;
+  border-radius: 3px;
+  text-decoration: none;
+}
+._btn:hover {
+  background: rgba(27, 156, 252, 0.1);
+  transform: scale(1.1);
+}
+._btn i {
+  margin-left: 20px;
+}
+
+/* Login CSS */
+.gradient-form {
+  margin-bottom: 50px;
+}
+
+.error {
+  color: #b22222;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.left-panel {
+  height: 115vh;
+  margin-bottom: 50px;
+}
+
+.gradient-custom-2 {
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  align-self: center;
+  height: 115vh;
+}
+
+.login-logo {
+  width: 200px;
+  border-radius: 20%;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin: 10px 0px 0px 10px;
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 30px;
+  background: #9b59b6;
+}
+.image{
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 90vh !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+  }
+}
+
+
