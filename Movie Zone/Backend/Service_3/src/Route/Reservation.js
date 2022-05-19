@@ -23,14 +23,15 @@ router.get('/get-reservation',(req,res)=>{
 
 // Add Reservation Details
 router.post('/add-reservation',(req,res)=>{
-    const { userId, name , description, amount, movieList} = req.body;
+    const { userId, movieId ,name, showDate, showTime, showTheatre} = req.body;
 
         const newReservation= new Reservation({
             userId, 
-            name , 
-            description, 
-            amount, 
-            movieList
+			movieId,
+			name, 
+			showDate,
+			showTime, 
+			showTheatre
         });
         newReservation.save();
         

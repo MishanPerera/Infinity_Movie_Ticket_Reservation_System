@@ -5,22 +5,26 @@ const ReservationSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    movieId:{
+        type: String,
+        required: true
+    },
     name:{
         type: String,
         required: true
     },
-    description:{
-        type: String,
+	showDate:{
+		type: String,
         required: true
-    },
-    amount:{
-        type:String,
-        required:true
-    },
-    movieList:{
-        type:Object,
-        required:true
-    },
+	},
+	showTime:{
+		type: String,
+        required: true
+	},
+	showTheatre:{
+		type: String,
+        required: true
+	},
     reservation_date:{
         type: Date,
         default: Date.now
