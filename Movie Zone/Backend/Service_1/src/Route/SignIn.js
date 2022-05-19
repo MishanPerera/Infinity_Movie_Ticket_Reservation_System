@@ -3,6 +3,12 @@ const router= express.Router();
 const bcrypt =require('bcrypt')
 const User = require('../Models/User');
 
+router.get('/user',(req,res)=>{
+	User.find((err,doc)=>{
+        if(!err) res.send(doc);
+        else console.log('Error in Retrieving Movie Details :'+JSON.stringify(err,undefined,2));
+    })
+})
 router.post('/sign-in',(req,res)=>{
 
     const {email , password} = req.body;
