@@ -15,11 +15,12 @@ router.get('/get-cart/:id',(req,res)=>{
 
 // Add cart Details
 router.post('/add-cart',(req,res)=>{
-    const { userId, movieId ,name, showDate, showTime, showTheatre} = req.body;
+    const { userId, movieId ,name, showDate, showTime, showTheatre, movieUserId} = req.body;
 
     const newCart= new Cart({
         userId, 
         movieId,
+		movieUserId,
         name,
         showDate,
         showTime,
