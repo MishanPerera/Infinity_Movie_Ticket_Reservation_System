@@ -5,13 +5,25 @@ const CartSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    movie:{
+	movieId:{
+		type:String,
+        required:true
+	},
+	name:{
+        type: String,
+        required: true
+    },
+	showDate:{
         type:String,
         required:true
     },
-    reservation_date:{
-        type: Date,
-        default: Date.now
+    showTime:{
+        type:String,
+        required:true
+    },
+    showTheatre:{
+        type: String,
+        required: true
     }
 });
 

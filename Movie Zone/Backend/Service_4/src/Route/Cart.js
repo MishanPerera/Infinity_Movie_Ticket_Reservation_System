@@ -15,20 +15,18 @@ router.get('/get-cart/:id',(req,res)=>{
 
 // Add cart Details
 router.post('/add-cart',(req,res)=>{
-    const { userId, movie} = req.body;
+    const { userId, movieId ,name, showDate, showTime, showTheatre} = req.body;
 
-    Cart.findOne({userId, movie}).then((cart)=>{
-        if(cart)
-            return res.status(400).json({msg : 'Movie does exists'});
-
-        const newCart= new Cart({
-            userId, 
-            movie
-        });
-        newCart.save();
-        
-        return res.status(200).json({msg : 'Movie has been added'});
-    }).catch(e => console.log(e))
+    const newCart= new Cart({
+        userId, 
+        movieId,
+        name,
+        showDate,
+        showTime,
+        showTheatre
+    });
+    newCart.save();
+    return res.status(200).json({msg : 'Movie has been added'});
     }
 )
 
