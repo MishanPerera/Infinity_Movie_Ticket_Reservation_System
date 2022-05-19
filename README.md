@@ -35,7 +35,7 @@
 
 15.Open the VS Code and open web => src => utils => hostAddress.js and paste the above copied     ip address and assign it to the constant variable called ‘ip’ 
 
-16. Then type following command in the terminals opened in the step 3
+16.Then type following command in the terminals opened in the step 3
 			Command - npm start
 
 17.Then you should see both Rest-service and web up and running. 
