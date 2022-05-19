@@ -13,6 +13,15 @@ router.get('/get-reservation/:id',(req,res)=>{
     })
 })
 
+router.get('/get-adminreservation/:id',(req,res)=>{
+    if(!isValidObjectId(req.params.id)) return res.status(400).send(`No Record with given id : $(req.params.id)`);
+
+    Reservation.find({movieUserId : req.params.id},(err,doc)=>{
+        if(!err) res.send(doc)
+        else console.log("Error in Retrieving Movie Details :" +JSON.stringify(err,undefined,2));
+    })
+})
+
 // Get All Reservation Details
 router.get('/get-reservation',(req,res)=>{
     Reservation.find((err,doc)=>{
@@ -23,11 +32,12 @@ router.get('/get-reservation',(req,res)=>{
 
 // Add Reservation Details
 router.post('/add-reservation',(req,res)=>{
-    const { userId, movieId ,name, showDate, showTime, showTheatre} = req.body;
+    const { userId, movieId ,name, showDate, showTime, showTheatre,movieUserId} = req.body;
 
         const newReservation= new Reservation({
             userId, 
 			movieId,
+			movieUserId,
 			name, 
 			showDate,
 			showTime, 
