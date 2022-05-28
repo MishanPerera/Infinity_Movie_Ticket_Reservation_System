@@ -62,6 +62,13 @@ body{
   margin-bottom: 10px;
 }
 
+.customer {
+  margin: 50px 0px;
+}
+.dailog{
+  min-width: 734px;
+}
+
 .title {
   margin: 10px 0px 0px 10px;
   font-size: 25px;

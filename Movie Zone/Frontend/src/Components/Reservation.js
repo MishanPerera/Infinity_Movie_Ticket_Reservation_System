@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
 
-import QR_Generator from './QR_Generator';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
 import Navbar from './Navbar'
 
 export default function Reservation() {
@@ -12,7 +14,11 @@ export default function Reservation() {
     const [values,setValues]=useState([]);
 
     useEffect(()=>{
-        if(role !== 'Customer'){
+        if(role === 'Movie Admin'){
+            axios.get(`http://localhost:8002/get-adminreservation/${userId}`).then(res=>{
+                setValues(res.data);
+            })
+        }else if(role === 'System Admin'){
             axios.get('http://localhost:8002/get-reservation/').then(res=>{
                 setValues(res.data);
             })
@@ -36,8 +42,6 @@ export default function Reservation() {
                     <tr>
                         <th>No</th>
                         <th>Name</th>
-                        <th>Cast</th>
-                        <th>Description</th>
                         <th>Show Date</th>
                         <th>Time</th>
                         <th>Theatre</th>
@@ -50,19 +54,15 @@ export default function Reservation() {
                             <tr key={values._id}>
                                 <td>{++movieCount}</td>
                                 <td>{values.name}</td>
-                                <td>{
-                                        values.cast ? values.cast.map(values=>(
-                                            <>{values}<br/></>
-                                        )): null
-                                    }</td>
-                                <td>{values.description}</td>
                                 <td>{values.showDate}</td>
                                 <td>{values.showTime}</td>
                                 <td>{values.showTheatre}</td>
                                 <td>
                                     <button type="button" class="btn btn-link btn-sm btn-rounded" onClick={()=>{
                                         axios.delete(`http://localhost:8002/delete-reservation/${values._id}`).then(res=>{
-                                            
+                                            axios.get('http://localhost:8002/get-reservation/').then(res=>{
+                                                setValues(res.data);
+                                        })
                                         })
                                     }}>Cancel</button>
                                 </td>
@@ -81,6 +81,7 @@ export default function Reservation() {
         <>
             <Navbar/>
             <br/>
+            <ToastContainer/>
             <h3 className='text-center'>Reservation Details</h3>
             <br/>
             <div className="row d-flex justify-content-center h-100">
@@ -117,6 +118,22 @@ export default function Reservation() {
                                     <button type="button" class="btn btn-link btn-sm btn-rounded" onClick={()=>{
                                         window.location.pathname = "/qr/"+values._id;
                                     }}>Go</button>
+                                    <button type="button" class="btn btn-link btn-sm btn-rounded" onClick={()=>{
+                                        axios.delete(`http://localhost:8002/delete-reservation/${values._id}`).then(res=>{
+                                            axios.get(`http://localhost:8002/get-reservation/${userId}`).then(res=>{
+                                                setValues(res.data);
+                                                toast.success("Cash will be reimbursed",{
+                                                    position: "top-center",
+                                                    autoClose: 1000,
+                                                    hideProgressBar: true,
+                                                    closeOnClick: true,
+                                                    pauseOnHover: true,
+                                                    draggable: false,
+                                                    progress: undefined,
+                                            })
+                                            })
+                                        })
+                                    }}>Delete</button>
                                 </td>
                             </tr>
                         )

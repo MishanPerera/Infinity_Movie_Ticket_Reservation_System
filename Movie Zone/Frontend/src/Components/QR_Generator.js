@@ -17,8 +17,18 @@ export default function QR_Generator() {
     }
     return (
     <>
-        <QRCode id='qrCodeEl' size={150} value={params.id}/>
-        <input type="button" value="Download" onClick={downloadQRCode}/>
+        <section className="text-center">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+        <div className="card mx-4 mx-md-5 align-items-center justify-content-center shadow-5-strong h-50 w-50">
+            <h1>QR Code Details</h1>
+            <input type="button" value="Back" onClick={()=>window.location.pathname="/home"}/>
+            <hr/>
+            <QRCode id='qrCodeEl' size={150} value={params.id}/>
+            <hr/>
+            <input type="button" value="Download" onClick={downloadQRCode}/>
+        </div>
+        </div>
+      </section>
     </>
     )
 }

@@ -11,7 +11,7 @@ export default function Navbar() {
 
     if(role === "System Admin"){
         return(
-            <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
         <Toolbar sx={{display: 'flex', alignItems:'center', backgroundColor: 'gray'}}>
             <Container sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: 'fit-content'}}>
