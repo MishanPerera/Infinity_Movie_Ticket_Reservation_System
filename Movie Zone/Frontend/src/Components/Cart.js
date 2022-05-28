@@ -33,7 +33,7 @@ export default function Cart() {
 			showTime: single.showTime, 
 			showTheatre: single.showTheatre
         }).then(res=>{
-            axios.delete(`http://localhost:8003/delete-cart/${single._id}`).then(res=>{
+            axios.delete(`http://localhost:8290/cart/delete-cart/${single._id}`).then(res=>{
                 axios.get(`http://localhost:8290/cart/get-cart/${userId}`).then(res=>{
                     setValues(res.data);
                     toast.success("Payment was Successful",{
@@ -104,7 +104,7 @@ export default function Cart() {
                                 <td>{values.showTheatre}</td>
                                 <td>
                                     <button type="button" class="btn btn-link btn-sm btn-rounded" onClick={()=>{
-                                        axios.delete(`http://localhost:8003/delete-cart/${values._id}`).then(res=>{
+                                        axios.delete(`http://localhost:8290/cart/delete-cart/${values._id}`).then(res=>{
                                             axios.get(`http://localhost:8290/cart/get-cart/${userId}`).then(res=>{
                                                 setValues(res.data);
                                             })   

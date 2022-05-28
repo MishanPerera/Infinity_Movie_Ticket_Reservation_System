@@ -15,15 +15,15 @@ export default function Reservation() {
 
     useEffect(()=>{
         if(role === 'Movie Admin'){
-            axios.get(`http://localhost:8002/get-adminreservation/${userId}`).then(res=>{
+            axios.get(`http://localhost:8290/reservation/get-adminreservation/${userId}`).then(res=>{
                 setValues(res.data);
             })
         }else if(role === 'System Admin'){
-            axios.get('http://localhost:8002/get-reservation/').then(res=>{
+            axios.get('http://localhost:8290/reservation/get-reservation/').then(res=>{
                 setValues(res.data);
             })
         }else{
-            axios.get(`http://localhost:8002/get-reservation/${userId}`).then(res=>{
+            axios.get(`http://localhost:8290/reservation/get-reservation/${userId}`).then(res=>{
                 setValues(res.data);
             })
         }
@@ -59,10 +59,16 @@ export default function Reservation() {
                                 <td>{values.showTheatre}</td>
                                 <td>
                                     <button type="button" class="btn btn-link btn-sm btn-rounded" onClick={()=>{
-                                        axios.delete(`http://localhost:8002/delete-reservation/${values._id}`).then(res=>{
-                                            axios.get('http://localhost:8002/get-reservation/').then(res=>{
-                                                setValues(res.data);
-                                        })
+                                        axios.delete(`http://localhost:8290/reservation/delete-reservation/${values._id}`).then(res=>{
+                                            if(role === 'Movie Admin'){
+                                                axios.get(`http://localhost:8290/reservation/get-adminreservation/${userId}`).then(res=>{
+                                                    setValues(res.data);
+                                                })
+                                            }else{
+                                                axios.get('http://localhost:8290/reservation/get-reservation/').then(res=>{
+                                                    setValues(res.data);
+                                                })
+                                            }
                                         })
                                     }}>Cancel</button>
                                 </td>
@@ -119,8 +125,8 @@ export default function Reservation() {
                                         window.location.pathname = "/qr/"+values._id;
                                     }}>Go</button>
                                     <button type="button" class="btn btn-link btn-sm btn-rounded" onClick={()=>{
-                                        axios.delete(`http://localhost:8002/delete-reservation/${values._id}`).then(res=>{
-                                            axios.get(`http://localhost:8002/get-reservation/${userId}`).then(res=>{
+                                        axios.delete(`http://localhost:8290/reservation/delete-reservation/${values._id}`).then(res=>{
+                                            axios.get(`http://localhost:8290/reservation/get-reservation/${userId}`).then(res=>{
                                                 setValues(res.data);
                                                 toast.success("Cash will be reimbursed",{
                                                     position: "top-center",
