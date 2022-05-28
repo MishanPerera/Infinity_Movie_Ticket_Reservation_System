@@ -19,9 +19,9 @@
             <log description="Get Reservation Details By Id">
                 <property name="Message" value="Welcome to Reservation Service"/>
             </log>
-            <property description="Reservation Mediator" expression="get-property('query.param.id')" name="id" scope="default" type="STRING"/>
+            <property description="Reservation Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
-                <endpoint key="GetReservationById"/>
+                <endpoint key="GetReservationByIdEP"/>
             </send>
         </inSequence>
         <outSequence>
@@ -36,7 +36,7 @@
             </log>
             <property description="Reservation Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
-                <endpoint key="GetReservationById"/>
+                <endpoint key="GetAdminReservationByIdEP"/>
             </send>
         </inSequence>
         <outSequence>

@@ -62,8 +62,8 @@
     <artifact name="AddCartEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/AddCartEP.xml</file>
     </artifact>
-    <artifact name="DeleteCart" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/endpoints/DeleteCart.xml</file>
+    <artifact name="DeleteCartEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/DeleteCartEP.xml</file>
     </artifact>
     <artifact name="CartAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/CartAPI.xml</file>

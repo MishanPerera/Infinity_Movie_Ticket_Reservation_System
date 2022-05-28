@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint name="UpdateReservationEP" xmlns="http://ws.apache.org/ns/synapse">
-    <http method="put" uri-template="http://localhost:8002/update-reservation/{id}">
+    <http method="put" uri-template="http://localhost:8002/update-reservation/{uri.var.id}">
         <suspendOnFailure>
             <initialDuration>-1</initialDuration>
             <progressionFactor>1.0</progressionFactor>

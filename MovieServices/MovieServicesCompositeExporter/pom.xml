@@ -37,7 +37,7 @@
     <com.example.metadata_._CartAPI_swagger>capp/EnterpriseServiceBus</com.example.metadata_._CartAPI_swagger>
     <com.example.endpoint_._AddReservationEP>capp/EnterpriseServiceBus</com.example.endpoint_._AddReservationEP>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,synapse/metadata=yaml,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
-    <com.example.endpoint_._DeleteCart>capp/EnterpriseServiceBus</com.example.endpoint_._DeleteCart>
+    <com.example.endpoint_._DeleteCartEP>capp/EnterpriseServiceBus</com.example.endpoint_._DeleteCartEP>
     <com.example.metadata_._ReservationAPI_metadata>capp/EnterpriseServiceBus</com.example.metadata_._ReservationAPI_metadata>
     <com.example.endpoint_._UpdateReservationEP>capp/EnterpriseServiceBus</com.example.endpoint_._UpdateReservationEP>
     <com.example.endpoint_._GetMovieEP>capp/EnterpriseServiceBus</com.example.endpoint_._GetMovieEP>
@@ -177,7 +177,7 @@
     </dependency>
     <dependency>
       <groupId>com.example.endpoint</groupId>
-      <artifactId>DeleteCart</artifactId>
+      <artifactId>DeleteCartEP</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
