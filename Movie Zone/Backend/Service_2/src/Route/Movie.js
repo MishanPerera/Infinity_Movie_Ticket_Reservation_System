@@ -39,6 +39,7 @@ router.post('/add-movie',(req,res)=>{
             showTheatre, 
             showDate
         });
+		newMovie.cast = cast.replace('[','').replace(']','').split(',');
         newMovie.save();
         
         return res.status(200).json({msg : 'Movie has been Added'});
@@ -50,15 +51,17 @@ router.post('/add-movie',(req,res)=>{
 router.put('/update-movie/:id',(req,res)=>{
     if(!isValidObjectId(req.params.id)) return res.status(400).send(`No Movie Details with given id : $(req.params.id)`);
     
+	const movieCast = String(req.body.cast).replace('[','').replace(']','').split(',');
+	
     const app = {
         name : req.body.name, 
         description: req.body.description, 
-        cast: req.body.cast,
+        cast: movieCast,
         showTime: req.body.showTime, 
         showTheatre: req.body.showTheatre, 
         showDate: req.body.showDate,
     }
-
+	
     Movie.findByIdAndUpdate(req.params.id,{$set : app},{new:true},(err,doc)=>{
         if(!err) res.send(doc)
         else console.log("Error in Updating Movie Details :" +JSON.stringify(err,undefined,2));
