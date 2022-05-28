@@ -5,6 +5,7 @@
             <log description="Get Cart Details">
                 <property name="Message" value="Welcome to Cart Service"/>
             </log>
+            <property description="Cart Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
                 <endpoint key="GetCartEP"/>
             </send>
@@ -33,6 +34,7 @@
             <log description="Delete Cart Details">
                 <property name="Message" value="Welcome to Cart Service"/>
             </log>
+            <property description="Cart Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
                 <endpoint key="DeleteCartEP"/>
             </send>

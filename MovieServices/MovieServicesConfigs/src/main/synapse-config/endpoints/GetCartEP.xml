@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint name="GetCartEP" xmlns="http://ws.apache.org/ns/synapse">
-    <http method="get" uri-template="http://localhost:8003/get-cart/{id}">
+    <http method="get" uri-template="http://localhost:8003/get-cart/{uri.var.id}">
         <suspendOnFailure>
             <initialDuration>-1</initialDuration>
             <progressionFactor>1.0</progressionFactor>

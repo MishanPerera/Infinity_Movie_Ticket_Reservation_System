@@ -74,4 +74,7 @@
     <artifact name="CartAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
         <file>src/main/resources/metadata/CartAPI_metadata.yaml</file>
     </artifact>
+    <artifact name="GetAdminReservationByIdEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetAdminReservationByIdEP.xml</file>
+    </artifact>
 </artifacts>

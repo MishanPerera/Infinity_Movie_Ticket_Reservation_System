@@ -19,6 +19,22 @@
             <log description="Get Reservation Details By Id">
                 <property name="Message" value="Welcome to Reservation Service"/>
             </log>
+            <property description="Reservation Mediator" expression="get-property('query.param.id')" name="id" scope="default" type="STRING"/>
+            <send>
+                <endpoint key="GetReservationById"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/get-adminreservation/{id}">
+        <inSequence>
+            <log description="Get Reservation Details By Id">
+                <property name="Message" value="Welcome to Reservation Service"/>
+            </log>
+            <property description="Reservation Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
                 <endpoint key="GetReservationById"/>
             </send>
@@ -47,6 +63,7 @@
             <log description="Update Reservation Details">
                 <property name="Message" value="Welcome to Reservation Service"/>
             </log>
+            <property description="Reservation Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
                 <endpoint key="UpdateReservationEP"/>
             </send>
@@ -61,6 +78,7 @@
             <log description="Delete Reservation Details">
                 <property name="Message" value="Welcome to Reservation Service"/>
             </log>
+            <property description="Reservation Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
                 <endpoint key="DeleteReservationEP"/>
             </send>

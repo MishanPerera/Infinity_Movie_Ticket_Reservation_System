@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint name="GetMovieByIdEP" xmlns="http://ws.apache.org/ns/synapse">
-    <http method="get" uri-template="http://localhost:8001/get-movie/{id}">
+    <http method="get" uri-template="http://localhost:8001/get-movie/{uri.var.id}">
         <suspendOnFailure>
             <initialDuration>-1</initialDuration>
             <progressionFactor>1.0</progressionFactor>

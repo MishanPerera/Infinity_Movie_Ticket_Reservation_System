@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint name="DeleteCart" xmlns="http://ws.apache.org/ns/synapse">
-    <http method="delete" uri-template="http://localhost:8002/delete-cart/{id}">
+    <http method="delete" uri-template="http://localhost:8003/delete-cart/{uri.var.id}">
         <suspendOnFailure>
             <initialDuration>-1</initialDuration>
             <progressionFactor>1.0</progressionFactor>

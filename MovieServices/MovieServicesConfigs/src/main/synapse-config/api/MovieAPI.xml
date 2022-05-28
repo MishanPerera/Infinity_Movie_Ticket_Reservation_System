@@ -2,7 +2,7 @@
 <api context="/movie" name="MovieAPI" xmlns="http://ws.apache.org/ns/synapse">
     <resource methods="GET" uri-template="/get-movie">
         <inSequence>
-            <log description="Get Movie Details By ID">
+            <log description="Get Movie Details">
                 <property name="Message" value="Welcome to Movie Service"/>
             </log>
             <send>
@@ -16,9 +16,10 @@
     </resource>
     <resource methods="GET" uri-template="/get-movie/{id}">
         <inSequence>
-            <log description="Get Movie Details">
+            <log description="Get Movie Details By Id">
                 <property name="Message" value="Welcome to Movie Service"/>
             </log>
+            <property description="Get Movie Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
                 <endpoint key="GetMovieByIdEP"/>
             </send>
@@ -42,11 +43,12 @@
         </outSequence>
         <faultSequence/>
     </resource>
-    <resource methods="PUT" uri-template="/update-movie">
+    <resource methods="PUT" uri-template="/update-movie/{id}">
         <inSequence>
             <log description="Update Movie Details">
                 <property name="Message" value="Welcome to Movie Service"/>
             </log>
+            <property description="Get Movie Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
                 <endpoint key="UpdateMovieEP"/>
             </send>
@@ -61,6 +63,7 @@
             <log description="Delete Movie Details">
                 <property name="Message" value="Welcome to Movie Service"/>
             </log>
+            <property description="Get Movie Mediator" expression="get-property('uri.var.id')" name="id" scope="default" type="STRING"/>
             <send>
                 <endpoint key="DeleteMovieEP"/>
             </send>

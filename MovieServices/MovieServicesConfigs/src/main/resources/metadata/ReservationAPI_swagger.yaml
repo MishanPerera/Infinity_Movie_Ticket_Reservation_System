@@ -17,6 +17,21 @@ paths:
       - name: id
         in: path
         required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /get-adminreservation/{id}:
+    get:
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
         schema:
           type: string
       responses:
@@ -43,6 +58,8 @@ paths:
       - name: id
         in: path
         required: true
+        style: simple
+        explode: false
         schema:
           type: string
       requestBody:
@@ -64,6 +81,8 @@ paths:
       - name: id
         in: path
         required: true
+        style: simple
+        explode: false
         schema:
           type: string
       responses:

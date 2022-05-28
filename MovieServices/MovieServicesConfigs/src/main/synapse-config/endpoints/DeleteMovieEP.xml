@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint name="DeleteMovieEP" xmlns="http://ws.apache.org/ns/synapse">
-    <http method="delete" uri-template="http://localhost:8001/delete-movie/{id}">
+    <http method="delete" uri-template="http://localhost:8001/delete-movie/{uri.var.id}">
         <suspendOnFailure>
             <initialDuration>-1</initialDuration>
             <progressionFactor>1.0</progressionFactor>

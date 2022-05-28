@@ -39,8 +39,16 @@ paths:
       responses:
         default:
           description: Default response
-  /update-movie:
+  /update-movie/{id}:
     put:
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
       requestBody:
         description: Sample Payload
         content:

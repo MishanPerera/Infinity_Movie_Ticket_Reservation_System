@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint name="UpdateMovieEP" xmlns="http://ws.apache.org/ns/synapse">
-    <http method="put" uri-template="http://localhost:8001/update-movie/{id}">
+    <http method="put" uri-template="http://localhost:8001/update-movie/{uri.var.id}">
         <suspendOnFailure>
             <initialDuration>-1</initialDuration>
             <progressionFactor>1.0</progressionFactor>

@@ -30,6 +30,7 @@
     <com.example.endpoint_._AddCartEP>capp/EnterpriseServiceBus</com.example.endpoint_._AddCartEP>
     <com.example.endpoint_._UpdateMovieEP>capp/EnterpriseServiceBus</com.example.endpoint_._UpdateMovieEP>
     <com.example.api_._UserAPI>capp/EnterpriseServiceBus</com.example.api_._UserAPI>
+    <com.example.endpoint_._GetAdminReservationByIdEP>capp/EnterpriseServiceBus</com.example.endpoint_._GetAdminReservationByIdEP>
     <com.example.endpoint_._DeleteMovieEP>capp/EnterpriseServiceBus</com.example.endpoint_._DeleteMovieEP>
     <com.example.endpoint_._GetCartEP>capp/EnterpriseServiceBus</com.example.endpoint_._GetCartEP>
     <com.example.endpoint_._GetReservationEP>capp/EnterpriseServiceBus</com.example.endpoint_._GetReservationEP>
@@ -135,6 +136,12 @@
     <dependency>
       <groupId>com.example.api</groupId>
       <artifactId>UserAPI</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>GetAdminReservationByIdEP</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

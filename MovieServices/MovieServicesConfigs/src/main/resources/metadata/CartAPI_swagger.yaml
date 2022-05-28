@@ -12,6 +12,8 @@ paths:
       - name: id
         in: path
         required: true
+        style: simple
+        explode: false
         schema:
           type: string
       responses:
@@ -38,6 +40,8 @@ paths:
       - name: id
         in: path
         required: true
+        style: simple
+        explode: false
         schema:
           type: string
       responses:
